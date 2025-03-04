@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,22 +10,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Custom Styles */
-body {
   background-color: #000000; /* Μαύρο background */
   color: #FFFFFF; /* Άσπρο κείμενο */
-  background-image: url('/public/photos/bg.jpg'); /* Προσθήκη εικόνας */
+  background-image: url('C:\Users\tyfliorisf\Desktop\paranoid-reverb-site\public\photos/bg.jpg'); /* Προσθήκη εικόνας */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -28,4 +21,20 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: #228B22; /* Forest Green */
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #228B22;
+  padding: 10px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
 }

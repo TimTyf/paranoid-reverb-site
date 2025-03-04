@@ -1,21 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-function Navbar() {
+const Navbar = () => {
   return (
-    <nav className="bg-black bg-opacity-80 p-4 fixed top-0 w-full shadow-lg">
-      <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-[#228B22]">Paranoid Reverb</h1>
-        <div className="space-x-4">
-          <Link to="/" className="text-white hover:text-[#228B22]">Home</Link>
-          <Link to="/music" className="text-white hover:text-[#228B22]">Music</Link>
-          <Link to="/merch" className="text-white hover:text-[#228B22]">Merch</Link>
-          <Link to="/about" className="text-white hover:text-[#228B22]">About</Link>
-          <Link to="/contact" className="text-white hover:text-[#228B22]">Contact</Link>
-        </div>
-      </div>
+    <nav className="fixed top-1/4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-80 p-4 rounded-lg shadow-lg z-50">
+      <ul className="flex space-x-6">
+        <li><a href="#home" className="text-white hover:text-green-500">Home</a></li>
+        <li><a href="#music" className="text-white hover:text-green-500">Music</a></li>
+        <li><a href="#merch" className="text-white hover:text-green-500">Merch</a></li>
+        <li><a href="#about" className="text-white hover:text-green-500">About</a></li>
+        <li><a href="#contact" className="text-white hover:text-green-500">Contact</a></li>
+      </ul>
     </nav>
   );
-}
+};
 
 export default Navbar;

@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles */
+body {
+  background-color: #000000; /* Μαύρο background */
+  color: #FFFFFF; /* Άσπρο κείμενο */
+  background-image: url('/public/photos/bg.jpg'); /* Προσθήκη εικόνας */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #228B22; /* Forest Green */
+}

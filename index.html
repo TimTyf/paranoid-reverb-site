@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paranoid Reverb</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      background: #111;
+      color: #eee;
+      line-height: 1.6;
+    }
+    nav {
+      background: #1a1a1a;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+    nav a {
+      color: #eee;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 2rem 5%;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      border-bottom: 2px solid #444;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .tour-list li {
+      margin-bottom: 8px;
+    }
+    .album-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .album {
+      text-align: center;
+      width: 200px;
+    }
+    .album img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .button {
+      background: #444;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    @media (max-width: 600px) {
+      .album-list {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+    }
+footer a:hover {
+  color: #999;
+  transition: color 0.2s ease;
+}
+
+  </style>
+</head>
+<footer style="text-align: center; padding: 2rem; background: #1a1a1a;">
+  <a href="https://www.instagram.com/paranoid_reverb/" target="_blank" style="color: white; margin: 0 10px;">
+    <i class="fab fa-instagram fa-lg"></i>
+  </a>
+  <a href="https://www.youtube.com/channel/UCm9ocD0s0gdsz2ksix1-LRw" target="_blank" style="color: white; margin: 0 10px;">
+    <i class="fab fa-youtube fa-lg"></i>
+  </a>
+  <a href="https://open.spotify.com/artist/0r3BLCaLzRTHibb3lBckry" target="_blank" style="color: white; margin: 0 10px;">
+    <i class="fab fa-spotify fa-lg"></i>
+  </a>
+  <a href="https://music.apple.com/artist/paranoid-reverb/1526326994" target="_blank" style="color: white; margin: 0 10px;">
+    <i class="fab fa-apple fa-lg"></i>
+  </a>
+</footer>
+<body>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#tour">Tour</a>
+    <a href="#music">Music</a>
+    <a href="#merch">Merch</a>
+    <a href="#bio">Bio</a>
+  </nav>
+
+  <section id="home" style="position: relative; height: 100vh; overflow: hidden;">
+    <iframe
+      src="https://www.youtube.com/embed/38ohx_px_NU?autoplay=1&mute=1&controls=0&loop=1&playlist=38ohx_px_NU&modestbranding=1&showinfo=0"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; z-index: -1;"
+      title="Paranoid Reverb Reel"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+
+    <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; color: white; text-shadow: 0 0 10px black; text-align: center;">
+      <h1 style="font-size: 3rem; margin-bottom: 1rem;">Paranoid Reverb</h1>
+      <p style="font-size: 1.2rem; margin-bottom: 2rem;">Heavy Rock from Thessaloniki</p>
+      <a href="#music" style="padding: 0.8rem 1.5rem; background-color: #ff2c2c; color: white; border-radius: 6px; text-decoration: none; font-weight: bold;">
+        Listen Now
+      </a>
+    </div>
+  </section>
+
+  <section id="tour">
+    <h2>Upcoming Tour Dates</h2>
+    <ul class="tour-list">
+      <li><strong>June 15</strong> – Thessaloniki, Greece – Eightball Club</li>
+      <li><strong>June 30</strong> – Athens, Greece – Gagarin 205</li>
+    </ul>
+  </section>
+
+  <section id="music">
+  <h2>Our Music</h2>
+  <div class="album-list">
+    <div class="album">
+      <a href="https://paranoidreverb.bandcamp.com/album/billion-drops" target="_blank">
+        <img src="assets/billion-drops.jpg" alt="Billion Drops" />
+      </a>
+      <p><strong>Billion Drops</strong><br><small>(2020)</small></p>
+    </div>
+    <div class="album">
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+        <img src="assets/RedRiver-BlackRoots.jpg" alt="Red River Black Roots" />
+      </a>
+      <p><strong>Red River Black Roots</strong><br><small>(2025)</small></p>
+    </div>
+  </div>
+</section>
+
+
+  <section id="merch">
+    <h2>Merch</h2>
+    <p>Get official Paranoid Reverb merch & support our music!</p>
+    <a href="https://paranoidreverb.bandcamp.com/merch" target="_blank" class="button">Shop Now</a>
+  </section>
+
+  <section id="bio">
+    <h2>About the Band</h2>
+    <p><strong>Paranoid Reverb</strong> is a heavy rock band from Thessaloniki, Greece, known for their powerful sound that blends crushing riffs, groovy rhythms, and an intense, atmospheric vibe.</p>
+
+<p>In December 2020, they released their debut album <em>Billion Drops,</em> featuring standout tracks like “Maze” and “Rain.” The album introduced the band’s raw energy and emotional depth, gaining attention within the heavy rock and stoner scenes.</p>
+
+<p>Over the years, Paranoid Reverb have shared the stage with iconic acts such as Unida, Planet of Zeus, Dopethrone, Nightstalker, and more—earning a reputation for explosive live performances.</p>
+
+<p>With a new frontman now leading the charge, the band is currently working on their highly anticipated second full-length album, set to mark the next chapter of their sonic evolution.</p>
+</section>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paranoid Reverb – Tour</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Rajdhani', sans-serif;
+      color: white;
+      background: url('assets/site-backround.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.65);
+      z-index: -1;
+    }
+
+    nav {
+      background: #1a1a1a;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #eee;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 1px;
+    }
+
+    nav a:hover {
+      color: #ff2c2c;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 5rem auto 3rem auto;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }
+
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid #ff2c2c;
+      padding-bottom: 0.5rem;
+    }
+
+    .tour-date {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 4px solid #ff2c2c;
+      border-radius: 8px;
+    }
+
+    .tour-date strong {
+      font-size: 1.1rem;
+      color: #ff2c2c;
+    }
+
+    .buttons {
+      margin-top: 0.8rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s ease;
+      font-size: 0.9rem;
+    }
+
+    .event-link {
+      background-color: #444;
+      color: white;
+    }
+
+    .event-link:hover {
+      background-color: #777;
+      transform: scale(1.05);
+    }
+
+    .ticket-link {
+      background-color: #ff2c2c;
+      color: white;
+    }
+
+    .ticket-link:hover {
+      background-color: #ff4444;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .social-icons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      color: white;
+      text-decoration: none;
+    }
+
+    .social-icons a.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+    .social-icons a.youtube   { background-color: #ff0000; }
+    .social-icons a.spotify   { background-color: #1db954; }
+    .social-icons a.apple     { background-color: #aaa; }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+      box-shadow: 0 0 10px rgba(255,255,255,0.4);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 🔗 Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="tour.html">Tour</a>
+    <a href="https://paranoidreverb.bandcamp.com/merch" target="_blank">Merch</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="bio.html">Bio</a>
+  </nav>
+
+  <!-- 📆 Tour Content -->
+  <div class="container">
+    <h1>Upcoming Tour Dates</h1>
+
+    <div class="tour-date">
+      <strong>June 15, 2025</strong><br>
+      Thessaloniki, Greece – Eightball Club
+      <div class="buttons">
+        <a href="https://example.com/event1" class="event-link" target="_blank">Event Page</a>
+        <a href="https://example.com/tickets1" class="ticket-link" target="_blank">Tickets</a>
+      </div>
+    </div>
+
+    <div class="tour-date">
+      <strong>June 30, 2025</strong><br>
+      Athens, Greece – Gagarin 205
+      <div class="buttons">
+        <a href="https://example.com/event2" class="event-link" target="_blank">Event Page</a>
+        <a href="https://example.com/tickets2" class="ticket-link" target="_blank">Tickets</a>
+      </div>
+    </div>
+
+    <div class="tour-date">
+      <strong>July 12, 2025</strong><br>
+      Sofia, Bulgaria – Mixtape 5
+      <div class="buttons">
+        <a href="https://example.com/event3" class="event-link" target="_blank">Event Page</a>
+        <a href="https://example.com/tickets3" class="ticket-link" target="_blank">Tickets</a>
+      </div>
+    </div>
+
+    <div class="tour-date">
+      <strong>July 25, 2025</strong><br>
+      Belgrade, Serbia – Dom Omladine
+      <div class="buttons">
+        <a href="https://example.com/event4" class="event-link" target="_blank">Event Page</a>
+        <a href="https://example.com/tickets4" class="ticket-link" target="_blank">Tickets</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🔗 Social Media Footer -->
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/paranoid_reverb/" class="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/channel/UCm9ocD0s0gdsz2ksix1-LRw" class="youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://open.spotify.com/artist/0r3BLCaLzRTHibb3lBckry" class="spotify" target="_blank"><i class="fab fa-spotify"></i></a>
+      <a href="https://music.apple.com/artist/paranoid-reverb/1526326994" class="apple" target="_blank"><i class="fab fa-apple"></i></a>
+    </div>
+  </footer>
+
+</body>
+</html>

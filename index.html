@@ -4,41 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Paranoid Reverb</title>
-
-  <!-- Fonts + Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Rajdhani', sans-serif;
+    html, body {
       margin: 0;
-      background-color: #111;
-      background-image: url('assets/site-backround.jpg');
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-attachment: fixed;
-      background-size: cover;
-      color: #eee;
-      line-height: 1.6;
+      padding: 0;
+      background-color: black;
+      font-family: 'Rajdhani', sans-serif;
+      color: white;
+      overflow: hidden;
     }
 
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; 
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.4);
-      z-index: -2;
-    }
-
-    /* PRELOADER */
+    /* 🔥 Preloader */
     #preloader {
       position: fixed;
       top: 0;
@@ -50,7 +29,6 @@
       justify-content: center;
       align-items: center;
       z-index: 9999;
-      overflow: hidden;
     }
 
     .blur-overlay {
@@ -62,66 +40,29 @@
       z-index: 1;
     }
 
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      padding: 2rem 0;
-    }
-
-    .social-icons a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      color: white;
-      font-size: 1.4rem;
-      transition: all 0.3s ease;
-      text-decoration: none;
-    }
-
-      .social-icons a.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
-      .social-icons a.youtube { background-color: #ff0000; }
-      .social-icons a.spotify { background-color: #1db954; }
-      .social-icons a.apple { background-color: #aaa; }
-
-      .social-icons a:hover {
-        transform: scale(1.2);
-        box-shadow: 0 0 10px rgba(255,255,255,0.4);
-    }
-
     .fish-zoom {
       position: relative;
       z-index: 2;
       width: 200px;
-      animation: fishIn 3s ease-in-out forwards;
+      animation: fishIn 3.5s ease-in-out forwards;
     }
 
     @keyframes fishIn {
-      0% {
-        transform: scale(1);
-        opacity: 0;
-      }
-      30% {
-        opacity: 1;
-      }
-      100% {
-        transform: scale(6);
-        opacity: 0;
-      }
+      0%   { transform: scale(1); opacity: 0; }
+      30%  { opacity: 1; }
+      100% { transform: scale(6); opacity: 0; }
     }
 
     nav {
       background: #1a1a1a;
       padding: 1rem;
-      position: sticky;
-      top: 0;
       display: flex;
       justify-content: center;
       gap: 2rem;
-      z-index: 1000;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
       box-shadow: 0 2px 4px rgba(0,0,0,0.5);
     }
 
@@ -129,85 +70,13 @@
       color: #eee;
       text-decoration: none;
       font-weight: bold;
+      text-transform: uppercase;
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 1px;
     }
 
     nav a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      padding: 2rem 5%;
-      max-width: 900px;
-      margin: auto;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease;
-    }
-
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    h1, h2 {
-      font-family: 'Bebas Neue', sans-serif;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    h2 {
-      border-bottom: 2px solid #444;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .tour-list li {
-      margin-bottom: 8px;
-    }
-
-    .album-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .album {
-      text-align: center;
-      width: 200px;
-    }
-
-    .album img {
-      width: 100%;
-      border-radius: 8px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .album img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px rgba(255, 44, 44, 0.6);
-    }
-
-    .button {
-      background: #444;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      display: inline-block;
-      margin-top: 10px;
-      transition: background 0.3s ease;
-    }
-
-    .button:hover {
-      background-color: #ff2c2c;
-      color: #fff;
-    }
-
-    #bio {
-      color: #fff;
-      text-shadow: 0 0 10px #000;
-      padding: 4rem 5%;
-      border-radius: 12px;
+      color: #ff2c2c;
     }
 
     .video-background {
@@ -220,7 +89,6 @@
       flex-direction: row;
       overflow: hidden;
       z-index: -1;
-      background-color: black;
     }
 
     .video-background iframe {
@@ -229,18 +97,65 @@
       border: 0;
     }
 
-    footer {
+    /* 🎯 Intro Banner */
+    .intro-banner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       text-align: center;
-      padding: 2rem;
+      z-index: 5;
+      opacity: 0;
+      animation: fadeInBanner 2s ease 3.5s forwards;
+    }
+
+    .intro-banner h1 {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: 1px;
+      margin-bottom: 1.2rem;
+      color: #fff;
+      text-shadow: 0 0 4px rgba(0,0,0,0.6);
+    }
+
+    .intro-banner .button {
+      background-color: #ff2c2c;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease;
+    }
+
+    .intro-banner .button:hover {
+      background-color: #cc0000;
+    }
+
+    @keyframes fadeInBanner {
+      to {
+        opacity: 1;
+      }
+    }
+
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 1.5rem 0;
+      display: flex;
+      justify-content: center;
       background: transparent;
+      z-index: 2;
     }
 
     .social-icons {
       display: flex;
-      justify-content: center;
       gap: 1rem;
-      padding: 2rem 0;
-      background: transparent;
     }
 
     .social-icons a {
@@ -250,56 +165,26 @@
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      color: white;
       font-size: 1.4rem;
-      transition: all 0.3s ease;
+      color: white;
       text-decoration: none;
+      transition: transform 0.3s ease;
     }
 
-    .social-icons a.instagram {
-      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-    }
-    .social-icons a.youtube {
-      background-color: #ff0000;
-    }
-    .social-icons a.spotify {
-      background-color: #1db954;
-    }
-    .social-icons a.apple {
-      background-color: #aaa;
-    }
+    .social-icons a.instagram    { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+    .social-icons a.youtube      { background-color: #ff0000; }
+    .social-icons a.spotify      { background-color: #1db954; }
+    .social-icons a.apple        { background-color: #aaa; }
 
     .social-icons a:hover {
       transform: scale(1.2);
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
-    }
-
-
-    @media (max-width: 600px) {
-      .album-list {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      nav {
-        flex-wrap: wrap;
-        gap: 1rem;
-      }
-
-      #home h1 {
-        font-size: 2rem !important;
-      }
-
-      #home p {
-        font-size: 1.1rem !important;
-      }
+      box-shadow: 0 0 10px rgba(255,255,255,0.4);
     }
 
     @media (max-width: 768px) {
       .video-background {
         flex-direction: column;
       }
-
       .video-background iframe:nth-child(2),
       .video-background iframe:nth-child(3) {
         display: none;
@@ -310,100 +195,47 @@
 
 <body>
 
-  <!-- 🔥 PRELOADER -->
+  <!-- 🔥 Preloader -->
   <div id="preloader">
     <div class="blur-overlay"></div>
     <img src="assets/loading-fish.png" alt="Loading Fish" class="fish-zoom">
   </div>
 
-  <!-- 🎥 VIDEO BACKGROUND -->
+  <!-- 🎸 Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="tour.html">Tour</a>
+    <a href="https://paranoidreverb.bandcamp.com/merch" target="_blank">Merch</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="bio.html">Bio</a>
+  </nav>
+
+
+  <!-- 🎥 Video Background -->
   <div class="video-background">
-    <iframe src="https://player.vimeo.com/video/1087354051?h=323de14329&autoplay=1&loop=1&background=1&muted=1#t=0s" allow="autoplay; fullscreen" allowfullscreen title="Paranoid Reverb Reel 1"></iframe>
-    <iframe src="https://player.vimeo.com/video/1087354051?h=323de14329&autoplay=1&loop=1&background=1&muted=1#t=10s" allow="autoplay; fullscreen" allowfullscreen title="Paranoid Reverb Reel 2"></iframe>
-    <iframe src="https://player.vimeo.com/video/1087354051?h=323de14329&autoplay=1&loop=1&background=1&muted=1#t=20s" allow="autoplay; fullscreen" allowfullscreen title="Paranoid Reverb Reel 3"></iframe>
+    <iframe src="https://player.vimeo.com/video/1087354051?h=323de14329&autoplay=1&loop=1&background=1&muted=1#t=0s" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <iframe src="https://player.vimeo.com/video/1087354051?h=323de14329&autoplay=1&loop=1&background=1&muted=1#t=10s" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <iframe src="https://player.vimeo.com/video/1087354051?h=323de14329&autoplay=1&loop=1&background=1&muted=1#t=20s" allow="autoplay; fullscreen" allowfullscreen></iframe>
   </div>
 
-  <section id="home" style="position: relative; height: 100vh; overflow: hidden;">
-    <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; color: white; text-align: center;">
-      <h1 style="font-size: clamp(2rem, 5vw, 4rem); margin-bottom: 1rem; text-shadow: 0 0 10px black;">Paranoid Reverb</h1>
-      <p style="font-size: clamp(1rem, 2vw, 1.5rem); margin-bottom: 2rem; text-shadow: 0 0 6px black;">"Red River Black Roots" is available</p>
-      <a href="https://www.youtube.com/watch?v=9Tq6pQElBhU" target="_blank" class="button">Listen Now</a>
-    </div>
-  </section>
+  <!-- 🌟 Intro Banner -->
+  <div class="intro-banner">
+    <h1>"Red River Black Roots" is available</h1>
+    <a href="https://www.youtube.com/watch?v=9Tq6pQElBhU" class="button" target="_blank">Listen Now</a>
+  </div>
 
-  <section id="tour">
-    <h2>Upcoming Tour Dates</h2>
-    <ul class="tour-list">
-      <li><strong>June 15</strong> – Thessaloniki, Greece – Eightball Club</li>
-      <li><strong>June 30</strong> – Athens, Greece – Gagarin 205</li>
-    </ul>
-  </section>
-
-  <section id="music">
-    <h2>Our Music</h2>
-    <div class="album-list">
-      <div class="album">
-        <a href="https://paranoidreverb.bandcamp.com/album/billion-drops" target="_blank">
-          <img src="assets/billion-drops.jpg" alt="Billion Drops" />
-        </a>
-        <p><strong>Billion Drops</strong><br><small>(2020)</small></p>
-      </div>
-      <div class="album">
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-          <img src="assets/RedRiver-BlackRoots.jpg" alt="Red River Black Roots" />
-        </a>
-        <p><strong>Red River Black Roots</strong><br><small>(2025)</small></p>
-      </div>
-    </div>
-  </section>
-
-  <section id="merch">
-    <h2>Merch</h2>
-    <p>Get official Paranoid Reverb merch & support our music!</p>
-    <a href="https://paranoidreverb.bandcamp.com/merch" target="_blank" class="button">Shop Now</a>
-  </section>
-
-  <section id="bio">
-    <h2>About the Band</h2>
-    <p><strong>Paranoid Reverb</strong> is a heavy rock band from Thessaloniki, Greece, known for their powerful sound that blends crushing riffs, groovy rhythms, and an intense, atmospheric vibe.</p>
-    <p>In December 2020, they released their debut album <em>Billion Drops,</em> featuring standout tracks like “Maze” and “Rain.”</p>
-    <p>Over the years, they’ve shared the stage with Unida, Planet of Zeus, Dopethrone, Nightstalker, and more—earning a reputation for explosive live performances.</p>
-    <p>Now with a new frontman, the band is working on their second full-length album—ready for the next chapter of sonic evolution.</p>
-  </section>
-
+  <!-- 🎧 Social Media Footer -->
   <footer>
     <div class="social-icons">
-      <a href="https://www.instagram.com/paranoid_reverb/" class="instagram" target="_blank">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.youtube.com/channel/UCm9ocD0s0gdsz2ksix1-LRw" class="youtube" target="_blank">
-        <i class="fab fa-youtube"></i>
-      </a>
-      <a href="https://open.spotify.com/artist/0r3BLCaLzRTHibb3lBckry" class="spotify" target="_blank">
-        <i class="fab fa-spotify"></i>
-      </a>
-      <a href="https://music.apple.com/artist/paranoid-reverb/1526326994" class="apple" target="_blank">
-        <i class="fab fa-apple"></i>
-      </a>
+      <a href="https://www.instagram.com/paranoid_reverb/" class="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/channel/UCm9ocD0s0gdsz2ksix1-LRw" class="youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://open.spotify.com/artist/0r3BLCaLzRTHibb3lBckry" class="spotify" target="_blank"><i class="fab fa-spotify"></i></a>
+      <a href="https://music.apple.com/artist/paranoid-reverb/1526326994" class="apple" target="_blank"><i class="fab fa-apple"></i></a>
     </div>
   </footer>
 
-  <!-- JS: Show sections & hide preloader -->
+  <!-- JS to hide preloader -->
   <script>
-    const sections = document.querySelectorAll('section');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-
-    // Remove preloader after 4s
     window.addEventListener("load", () => {
       setTimeout(() => {
         const preloader = document.getElementById("preloader");
@@ -412,8 +244,9 @@
         setTimeout(() => {
           preloader.style.display = "none";
         }, 500);
-      }, 4000);
+      }, 3500);
     });
   </script>
+
 </body>
 </html>

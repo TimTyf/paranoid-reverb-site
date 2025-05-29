@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paranoid Reverb | Bio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Rajdhani', sans-serif;
+      background: url('assets/site-backround.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    nav {
+      background: #1a1a1a;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    nav a {
+      color: #eee;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 1px;
+    }
+
+    nav a:hover {
+      color: #ff2c2c;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 140px auto 80px auto;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.65);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.7);
+      line-height: 1.8;
+    }
+
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      text-transform: uppercase;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      background: transparent;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .social-icons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      color: white;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a.instagram    { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+    .social-icons a.youtube      { background-color: #ff0000; }
+    .social-icons a.spotify      { background-color: #1db954; }
+    .social-icons a.apple        { background-color: #aaa; }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+      box-shadow: 0 0 10px rgba(255,255,255,0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔝 Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="tour.html">Tour</a>
+    <a href="https://paranoidreverb.bandcamp.com/merch" target="_blank">Merch</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="bio.html">Bio</a>
+  </nav>
+
+  <!-- 📜 BIO Content -->
+  <div class="content">
+    <h1>About the Band</h1>
+    <p><strong>Paranoid Reverb</strong> is a heavy rock band from Thessaloniki, Greece, known for their powerful sound that blends crushing riffs, groovy rhythms, and an intense, atmospheric vibe.</p>
+    <p>In December 2020, they released their debut album <em>Billion Drops</em>, featuring standout tracks like “Maze” and “Rain.”</p>
+    <p>Over the years, they’ve shared the stage with Unida, Planet of Zeus, Dopethrone, Nightstalker, and more—earning a reputation for explosive live performances.</p>
+    <p>Now with a new frontman, the band is working on their second full-length album—ready for the next chapter of sonic evolution.</p>
+  </div>
+
+  <!-- 🎧 Social Media Footer -->
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/paranoid_reverb/" class="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/channel/UCm9ocD0s0gdsz2ksix1-LRw" class="youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://open.spotify.com/artist/0r3BLCaLzRTHibb3lBckry" class="spotify" target="_blank"><i class="fab fa-spotify"></i></a>
+      <a href="https://music.apple.com/artist/paranoid-reverb/1526326994" class="apple" target="_blank"><i class="fab fa-apple"></i></a>
+    </div>
+  </footer>
+
+</body>
+</html>

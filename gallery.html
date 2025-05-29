@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Paranoid Reverb</title>
+
+  <!-- Fonts + Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Rajdhani', sans-serif;
+      background: url('assets/site-backround.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    nav {
+      background: #1a1a1a;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #eee;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Bebas Neue', sans-serif;
+    }
+
+    nav a:hover {
+      color: #ff2c2c;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 4rem 2rem;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 12px;
+    }
+
+    h1 {
+      text-align: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+      margin-bottom: 2rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255,255,255,0.5);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .social-icons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      color: white;
+      text-decoration: none;
+    }
+
+    .social-icons a.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+    .social-icons a.youtube   { background-color: #ff0000; }
+    .social-icons a.spotify   { background-color: #1db954; }
+    .social-icons a.apple     { background-color: #aaa; }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+      box-shadow: 0 0 10px rgba(255,255,255,0.4);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 🔗 Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="tour.html">Tour</a>
+    <a href="merch.html">Merch</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="bio.html">Bio</a>
+  </nav>
+
+  <!-- 📸 Gallery Section -->
+  <div class="container">
+    <h1>Gallery</h1>
+    <div class="gallery-grid">
+      <!-- 20 εικόνες με fancybox -->
+      <!-- Ανέβασε τις στο assets/gallery με όνομα pr1.jpg έως pr20.jpg -->
+      <!-- Fancybox auto handles zoom/fullscreen/download -->
+      <!-- Loop ξεκινά -->
+      <!-- Μπορείς να προσθέσεις/αλλάξεις όσες θέλεις -->
+      <a data-fancybox="gallery" href="assets/gallery/pr1.jpg"><img src="assets/gallery/pr1.jpg" alt="Photo 1"></a>
+      <a data-fancybox="gallery" href="assets/gallery/pr2.jpg"><img src="assets/gallery/pr2.jpg" alt="Photo 2"></a>
+      <a data-fancybox="gallery" href="assets/gallery/pr3.jpg"><img src="assets/gallery/pr3.jpg" alt="Photo 3"></a>
+      <a data-fancybox="gallery" href="assets/gallery/pr4.jpg"><img src="assets/gallery/pr4.jpg" alt="Photo 4"></a>
+      <a data-fancybox="gallery" href="assets/gallery/pr5.jpg"><img src="assets/gallery/pr5.jpg" alt="Photo 5"></a>
+      <a data-fancybox="gallery" href="assets/gallery/pr6.jpg"><img src="assets/gallery/pr6.jpg" alt="Photo 6"></a>
+      <a data-fancybox="gallery" href="assets/gallery/pr7.jpg"><img src="assets/gallery/pr7.jpg" alt="Photo 7"></a>
+      <a data-fancybox="gallery" href="assets/gallery/pr8.jpg"><img src="assets/gallery/pr8.jpg" alt="Photo 8"></a>
+      <a data-fancybox="gallery" href="assets/gallery/pr9.jpg"><img src="assets/gallery/pr9.jpg" alt="Photo 9"></a>
+      <a data-fancybox="gallery" href="assets/gallery/pr10.jpg"><img src="assets/gallery/pr10.jpg" alt="Photo 10"></a>
+      <a data-fancybox="gallery" href="assets/gallery/pr11.jpg"><img src="assets/gallery/pr11.jpg" alt="Photo 11"></a>
+      <a data-fancybox="gallery" href="assets/gallery/pr12.jpg"><img src="assets/gallery/pr12.jpg" alt="Photo 12"></a>
+      <a data-fancybox="gallery" href="assets/gallery/pr13.jpg"><img src="assets/gallery/pr13.jpg" alt="Photo 13"></a>
+      <a data-fancybox="gallery" href="assets/gallery/pr14.jpg"><img src="assets/gallery/pr14.jpg" alt="Photo 14"></a>
+      <a data-fancybox="gallery" href="assets/gallery/pr15.jpg"><img src="assets/gallery/pr15.jpg" alt="Photo 15"></a>
+      <a data-fancybox="gallery" href="assets/gallery/pr16.jpg"><img src="assets/gallery/pr16.jpg" alt="Photo 16"></a>
+      <a data-fancybox="gallery" href="assets/gallery/pr17.jpg"><img src="assets/gallery/pr17.jpg" alt="Photo 17"></a>
+      <a data-fancybox="gallery" href="assets/gallery/pr18.jpg"><img src="assets/gallery/pr18.jpg" alt="Photo 18"></a>
+      <a data-fancybox="gallery" href="assets/gallery/pr19.jpg"><img src="assets/gallery/pr19.jpg" alt="Photo 19"></a>
+      <a data-fancybox="gallery" href="assets/gallery/pr20.jpg"><img src="assets/gallery/pr20.jpg" alt="Photo 20"></a>
+    </div>
+  </div>
+
+  <!-- 🎧 Footer -->
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/paranoid_reverb/" class="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/channel/UCm9ocD0s0gdsz2ksix1-LRw" class="youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://open.spotify.com/artist/0r3BLCaLzRTHibb3lBckry" class="spotify" target="_blank"><i class="fab fa-spotify"></i></a>
+      <a href="https://music.apple.com/artist/paranoid-reverb/1526326994" class="apple" target="_blank"><i class="fab fa-apple"></i></a>
+    </div>
+  </footer>
+
+  <!-- Fancybox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+</body>
+</html>

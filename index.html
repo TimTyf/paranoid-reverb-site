@@ -17,42 +17,6 @@
       overflow: hidden;
     }
 
-    /* 🔥 Preloader */
-    #preloader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-    }
-
-    .blur-overlay {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backdrop-filter: blur(10px);
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 1;
-    }
-
-    .fish-zoom {
-      position: relative;
-      z-index: 2;
-      width: 200px;
-      animation: fishIn 3.5s ease-in-out forwards;
-    }
-
-    @keyframes fishIn {
-      0%   { transform: scale(1); opacity: 0; }
-      30%  { opacity: 1; }
-      100% { transform: scale(6); opacity: 0; }
-    }
-
     nav {
       background: #1a1a1a;
       padding: 1rem;
@@ -97,7 +61,6 @@
       border: 0;
     }
 
-    /* 🎯 Intro Banner */
     .intro-banner {
       position: absolute;
       top: 50%;
@@ -106,13 +69,11 @@
       text-align: center;
       z-index: 5;
       opacity: 0;
-      animation: fadeInBanner 2s ease 3.5s forwards;
+      animation: fadeInBanner 2s ease 1s forwards;
     }
 
     .intro-banner h1 {
-      font-family: 'Rajdhani', sans-serif;
       font-size: 1.2rem;
-      font-weight: 400;
       font-style: italic;
       letter-spacing: 1px;
       margin-bottom: 1.2rem;
@@ -181,6 +142,80 @@
       box-shadow: 0 0 10px rgba(255,255,255,0.4);
     }
 
+    #splash-screen {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .splash-card {
+      background: #111;
+      border-radius: 10px;
+      padding: 2rem;
+      text-align: center;
+      max-width: 400px;
+      position: relative;
+      box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    }
+
+    .splash-card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .splash-card h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8rem;
+      color: #fff;
+      margin: 0.5rem 0;
+    }
+
+    .splash-card p {
+      font-size: 1rem;
+      color: #ccc;
+      margin-bottom: 1.5rem;
+    }
+
+    .splash-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .splash-card .button {
+      background: #ff2c2c;
+      padding: 0.7rem 1.2rem;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: background 0.3s ease;
+    }
+
+    .splash-card .button:hover {
+      background: #cc0000;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      background: transparent;
+      border: none;
+      font-size: 1.8rem;
+      color: white;
+      cursor: pointer;
+    }
+
     @media (max-width: 768px) {
       .video-background {
         flex-direction: column;
@@ -195,10 +230,18 @@
 
 <body>
 
-  <!-- 🔥 Preloader -->
-  <div id="preloader">
-    <div class="blur-overlay"></div>
-    <img src="assets/loading-fish.png" alt="Loading Fish" class="fish-zoom">
+  <!-- 🆕 Splash Screen -->
+  <div id="splash-screen">
+    <div class="splash-card">
+      <button class="close-btn" id="closeSplash">×</button>
+      <img src="assets/red-river-cover.jpg" alt="Album Cover">
+      <h2>Red River Black Roots is Out Now</h2>
+      <p>Discover the new release by Paranoid Reverb</p>
+      <div class="splash-buttons">
+        <a href="https://paranoidreverb.bandcamp.com/album/red-river-black-roots" class="button" target="_blank">Bandcamp</a>
+        <a href="https://www.youtube.com/watch?v=9Tq6pQElBhU" class="button" target="_blank">YouTube</a>
+      </div>
+    </div>
   </div>
 
   <!-- 🎸 Navigation -->
@@ -210,7 +253,6 @@
     <a href="bio.html">Bio</a>
   </nav>
 
-
   <!-- 🎥 Video Background -->
   <div class="video-background">
     <iframe src="https://player.vimeo.com/video/1087354051?h=323de14329&autoplay=1&loop=1&background=1&muted=1#t=0s" allow="autoplay; fullscreen" allowfullscreen></iframe>
@@ -221,10 +263,10 @@
   <!-- 🌟 Intro Banner -->
   <div class="intro-banner">
     <h1>"Red River Black Roots" is available</h1>
-    <a href="https://www.youtube.com/watch?v=9Tq6pQElBhU" class="button" target="_blank">Listen Now</a>
+    <a href="https://www.youtube.com/watch?v=9Tq6pQElBhU" class="button" target="_blank">Watch on YouTube</a>
   </div>
 
-  <!-- 🎧 Social Media Footer -->
+  <!-- 🎧 Footer -->
   <footer>
     <div class="social-icons">
       <a href="https://www.instagram.com/paranoid_reverb/" class="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -234,19 +276,32 @@
     </div>
   </footer>
 
-  <!-- JS to hide preloader -->
+  <!-- 🧠 JS to control splash -->
   <script>
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        const preloader = document.getElementById("preloader");
-        preloader.style.opacity = "0";
-        preloader.style.transition = "opacity 0.5s ease";
-        setTimeout(() => {
-          preloader.style.display = "none";
-        }, 500);
-      }, 3500);
+    document.addEventListener("DOMContentLoaded", () => {
+      const splash = document.getElementById("splash-screen");
+      const closeBtn = document.getElementById("closeSplash");
+
+      // Εμφάνιση splash μόνο την πρώτη φορά
+      if (!sessionStorage.getItem("splashShown")) {
+        splash.style.display = "flex";
+        sessionStorage.setItem("splashShown", "true");
+      } else {
+        splash.style.display = "none";
+      }
+
+      // Κλείσιμο με Χ
+      closeBtn.addEventListener("click", () => {
+        splash.style.display = "none";
+      });
+
+      // Κλείσιμο με Escape
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          splash.style.display = "none";
+        }
+      });
     });
   </script>
-
 </body>
 </html>
